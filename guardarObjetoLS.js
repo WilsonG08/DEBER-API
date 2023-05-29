@@ -1,8 +1,6 @@
 
 /* Se debe ejecutar en el navegador */
 
-"use strict";
-
 fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
       .then(json => {
@@ -18,5 +16,6 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 })
 
 const guardarLocalStorage = (data) =>{
-    localStorage.setItem('deber', JSON.stringify(data))
+    localStorage.setItem('taller', JSON.stringify(data))
+    console.log("Objeto de usuario almacenado en localStorage")
 }
