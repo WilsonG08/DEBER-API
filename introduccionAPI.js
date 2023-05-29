@@ -1,15 +1,21 @@
-"use strict";
+/* 
+    Se puede ejecutar normal 
+    Dar ctrl + clic para ver la foto del personaje
+*/
 
 fetch('https://rickandmortyapi.com/api/character/1')
     .then(response => response.json())
     .then(json => console.log(json));
 
-const obtenerData = async (idPersonaje) => {
+const obtenerPersonaje = async (idPersonaje) => {
     const peticion = await fetch(`https://rickandmortyapi.com/api/character/${idPersonaje}`);
     const response = await peticion.json();
     console.log(response.name, response.image);
 };
 
-obtenerData(6); 
+/* 
+Digitar un numero para obtener un personaje
+*/
+obtenerPersonaje(6); 
 
 
